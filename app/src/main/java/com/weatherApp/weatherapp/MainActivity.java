@@ -194,7 +194,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                 sunsetTxt.setText(new SimpleDateFormat("hh:mm a", Locale.ENGLISH).format(new Date(sunset * 1000)));
                 windTxt.setText("Wind: "+windSpeed);
                 humidityTxt.setText("Humidity: "+humidity);
-                
+
                 /*เปลี่ยนรูป icon weather condition*/
                 switch (weatherDescription){
                     case "clear sky":
