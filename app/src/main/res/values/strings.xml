@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">MyProject</string>
+    <string name="search">Search</string>
+    <string name="City">City</string>
+    <string name="temp">34.48 C</string>
+    <string name="min_temp">Min Temp : 29.54 C</string>
+    <string name="max_temp">Max Temp : 35.61 C</string>
+    <string name="sunrise">sunrise</string>
+    <string name="sunset">sunset</string>
+    <string name="weather">Weather : Partly Sunny</string>
+    <string name="wind">Wind : 2.69</string>
+    <string name="humidity">Humidity : 53</string>
+    <string name="des">imgDes</string>
+    <string name="btn">Ok</string>
+    <string name="err">Something went wrong</string>
+    <string name="err_text">Sorry, couldn\'t find\u0020</string>
+</resources>

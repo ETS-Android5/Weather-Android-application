@@ -1,0 +1,8 @@
+com/weatherApp/weatherapp/BuildConfig.java
+ com.weatherApp.weatherapp.BuildConfig
+com/weatherApp/weatherapp/HttpRequest.java
+ com.weatherApp.weatherapp.HttpRequest
+com/weatherApp/weatherapp/MainActivity.java
+ com.weatherApp.weatherapp.MainActivity
+ com.weatherApp.weatherapp.MainActivity$SearchBox
+ com.weatherApp.weatherapp.MainActivity$weatherTask

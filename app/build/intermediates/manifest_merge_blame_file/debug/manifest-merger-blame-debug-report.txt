@@ -1,0 +1,58 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.weatherApp.weatherapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+7-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:8:5-9:40
+8        android:minSdkVersion="16"
+8-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:8:15-40
+9        android:targetSdkVersion="30" />
+9-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:9:9-38
+10
+11    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+11-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:5:5-81
+11-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:5:22-78
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:6:5-67
+12-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:6:22-64
+13    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+13-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:7:5-79
+13-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:7:22-76
+14
+15    <application
+15-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:10:5-24:19
+16        android:allowBackup="true"
+16-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:11:9-35
+17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+17-->[androidx.core:core:1.1.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/94c4745ecd6aa2bded7c344d03d4593c/transformed/core-1.1.0/AndroidManifest.xml:24:18-86
+18        android:debuggable="true"
+19        android:icon="@mipmap/ic_launcher"
+19-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:12:9-43
+20        android:label="Weather App"
+20-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:15:9-36
+21        android:roundIcon="@mipmap/ic_launcher_round"
+21-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:13:9-54
+22        android:supportsRtl="true"
+22-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:14:9-35
+23        android:testOnly="true"
+24        android:theme="@style/AppTheme" >
+24-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:16:9-40
+25        <activity android:name="com.weatherApp.weatherapp.MainActivity" >
+25-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:17:9-23:20
+25-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:17:19-72
+26            <intent-filter>
+26-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:18:13-22:29
+27                <action android:name="android.intent.action.MAIN" />
+27-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:19:17-69
+27-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:19:25-66
+28
+29                <category android:name="android.intent.category.LAUNCHER" />
+29-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:21:17-77
+29-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:21:27-74
+30            </intent-filter>
+31        </activity>
+32    </application>
+33
+34</manifest>
