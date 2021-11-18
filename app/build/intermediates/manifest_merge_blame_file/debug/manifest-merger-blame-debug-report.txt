@@ -22,7 +22,7 @@
 13-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:7:22-76
 14
 15    <application
-15-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:10:5-24:19
+15-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:10:5-23:19
 16        android:allowBackup="true"
 16-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:11:9-35
 17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -40,17 +40,17 @@
 24        android:theme="@style/AppTheme" >
 24-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:16:9-40
 25        <activity android:name="com.weatherApp.weatherapp.MainActivity" >
-25-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:17:9-23:20
+25-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:17:9-22:20
 25-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:17:19-72
 26            <intent-filter>
-26-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:18:13-22:29
+26-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:18:13-21:29
 27                <action android:name="android.intent.action.MAIN" />
 27-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:19:17-69
 27-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:19:25-66
 28
 29                <category android:name="android.intent.category.LAUNCHER" />
-29-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:21:17-77
-29-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:21:27-74
+29-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:20:17-77
+29-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:20:27-74
 30            </intent-filter>
 31        </activity>
 32    </application>

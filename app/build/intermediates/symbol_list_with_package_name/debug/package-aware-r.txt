@@ -673,6 +673,7 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button_background
 drawable clouds
+drawable clouds2
 drawable dialog_background
 drawable few_clouds
 drawable ic_launcher_background

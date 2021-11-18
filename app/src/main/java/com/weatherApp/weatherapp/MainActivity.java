@@ -35,7 +35,7 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements LocationListener{
     protected LocationManager locationManager;
-    String API = "8118ed6ee68db2debfaaa5a44c832918"; //ลองไป Register เอง
+    String API = "8118ed6ee68db2debfaaa5a44c832918"; //API Token
     String CITY = "";
     String COUNTRY = "";
     String changeCity = "";
@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
 
     TextView addressTxt, statusTxt, tempTxt, temp_minTxt, temp_maxTxt, sunriseTxt, sunsetTxt, windTxt, humidityTxt;
     ImageView weatherCon;
-    Button searchBtn;
     EditText searchBox;
+    Button searchBtn;
 
     @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
     @SuppressLint("MissingPermission")
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         searchBtn = findViewById(R.id.button);
-        new SearchBox().search(searchBtn);
+        new SearchBox().searchWithButton(searchBtn);
         new SearchBox().searchWithEnterKey();
     }
 
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
 
     class SearchBox {
         @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
-        protected void search(Button btn){
+        protected void searchWithButton(Button btn){
             btn.setOnClickListener(view -> {
                 if(changeCity.equals("")){
                     searchBox = findViewById(R.id.searchBox);
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                         COUNTRY = "";
                         new weatherTask().execute();
                         changeCity = "";
-                    }//end if
+                    }
                     searchBox.setText(null);
                 }//end if
             });
@@ -143,10 +143,10 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                         COUNTRY = "";
                         new weatherTask().execute();
                         changeCity = "";
-                    }//end if
+                    }
                     searchBox.setText(null);
                     return true;
-                }
+                }//end if
                 return false;
             });
         }

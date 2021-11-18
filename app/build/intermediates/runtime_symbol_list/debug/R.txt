@@ -672,6 +672,7 @@ int drawable btn_radio_on_mtrl 0x7f06005f
 int drawable btn_radio_on_to_off_mtrl_animation 0x7f060060
 int drawable button_background 0x7f060061
 int drawable clouds 0x7f060062
+int drawable clouds2 0x7f060087
 int drawable dialog_background 0x7f060063
 int drawable few_clouds 0x7f060064
 int drawable ic_launcher_background 0x7f060065

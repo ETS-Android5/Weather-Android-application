@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+@SuppressWarnings("ALL")
 public class HttpRequest {
     public static String excuteGet(String targetURL1, String targetURL2) {
         URL url;

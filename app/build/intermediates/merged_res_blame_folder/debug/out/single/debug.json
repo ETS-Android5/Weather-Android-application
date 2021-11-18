@@ -48,12 +48,12 @@
         "source": "/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/adeenunabdullee/Code/CS361_Final-project/app/build/intermediates/merged_res/debug/drawable_button_background.xml.flat",
-        "source": "/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/res/drawable/button_background.xml"
-    },
-    {
         "merged": "/Users/adeenunabdullee/Code/CS361_Final-project/app/build/intermediates/merged_res/debug/drawable_thunderstrom.png.flat",
         "source": "/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/res/drawable/thunderstrom.png"
+    },
+    {
+        "merged": "/Users/adeenunabdullee/Code/CS361_Final-project/app/build/intermediates/merged_res/debug/drawable_button_background.xml.flat",
+        "source": "/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/res/drawable/button_background.xml"
     },
     {
         "merged": "/Users/adeenunabdullee/Code/CS361_Final-project/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.png.flat",
@@ -150,6 +150,10 @@
     {
         "merged": "/Users/adeenunabdullee/Code/CS361_Final-project/app/build/intermediates/merged_res/debug/drawable_test2.png.flat",
         "source": "/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/res/drawable/test2.png"
+    },
+    {
+        "merged": "/Users/adeenunabdullee/Code/CS361_Final-project/app/build/intermediates/merged_res/debug/drawable_clouds2.png.flat",
+        "source": "/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/res/drawable/clouds2.png"
     },
     {
         "merged": "/Users/adeenunabdullee/Code/CS361_Final-project/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",

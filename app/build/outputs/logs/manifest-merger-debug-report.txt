@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:2:1-25:12
-INJECTED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:2:1-25:12
-INJECTED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:2:1-25:12
-INJECTED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:2:1-25:12
+ADDED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:2:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/f64d285e7c0c3f58199652dd5e42cb34/transformed/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/adeenunabdullee/.gradle/caches/transforms-3/f491d48deff9269f903ac6017e461559/transformed/constraintlayout-1.1.3/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/bc4fd821a6e51a54b504be8013b5f90b/transformed/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
@@ -25,20 +25,20 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/adeenunabdullee/.g
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/d6b2c6310d0da332cb9475defea77305/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/b8e61f2d133f499e6198163cf2456f01/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/b39e20052568115d5d6e20e605eabe6a/transformed/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:2:1-25:12
-INJECTED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:2:1-25:12
-INJECTED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:2:1-24:12
 	package
 		ADDED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:3:5-40
 		INJECTED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml
-		ADDED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:2:1-25:12
+		ADDED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:2:1-24:12
 		INJECTED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml
-		ADDED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:2:1-25:12
+		ADDED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:2:1-24:12
 		INJECTED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:2:11-69
@@ -111,7 +111,7 @@ INJECTED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/Andro
 		INJECTED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml
 application
-ADDED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:10:5-24:19
+ADDED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:10:5-23:19
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/adeenunabdullee/.gradle/caches/transforms-3/f491d48deff9269f903ac6017e461559/transformed/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/adeenunabdullee/.gradle/caches/transforms-3/f491d48deff9269f903ac6017e461559/transformed/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
 MERGED from [androidx.core:core:1.1.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/94c4745ecd6aa2bded7c344d03d4593c/transformed/core-1.1.0/AndroidManifest.xml:24:5-89
@@ -133,16 +133,16 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/adee
 	android:theme
 		ADDED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:16:9-40
 activity#com.weatherApp.weatherapp.MainActivity
-ADDED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:17:9-23:20
+ADDED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:17:9-22:20
 	android:name
 		ADDED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:17:19-72
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:18:13-22:29
+ADDED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:18:13-21:29
 action#android.intent.action.MAIN
 ADDED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:19:17-69
 	android:name
 		ADDED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:19:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:21:17-77
+ADDED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:21:27-74
+		ADDED from /Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:20:27-74
