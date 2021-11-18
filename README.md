@@ -1,2 +1,4 @@
 # CS361_Final-project
-weather application
+CS361 Mobile Application Development
+
+Final Project
