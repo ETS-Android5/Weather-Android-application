@@ -38,14 +38,14 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:layout_weight="1"
-                    android:autofillHints=""
                     android:fontFamily="@font/mvboli"
                     android:gravity="left"
                     android:hint="@string/search"
                     android:inputType="text"
                     android:imeOptions="actionSearch"
                     android:textSize="15sp"
-                    tools:ignore="DuplicateSpeakableTextCheck,RtlCompat,RtlHardcoded,TouchTargetSizeCheck,UnusedAttribute"/>
+                    tools:ignore="DuplicateSpeakableTextCheck,RtlCompat,RtlHardcoded,TouchTargetSizeCheck,UnusedAttribute"
+                    android:autofillHints="your hint here" />
 
                 <Button
                     android:id="@+id/button"
@@ -282,6 +282,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/humidityBack"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="40dp"
@@ -293,11 +294,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="50dp"
+            android:fontFamily="@font/mvboli"
             android:gravity="center|top"
             android:text="@string/humidity"
             android:textColor="@color/white"
             android:textSize="30sp"
-            android:fontFamily="@font/mvboli"
             tools:ignore="TextContrastCheck,UnusedAttribute" />
     </LinearLayout>
 

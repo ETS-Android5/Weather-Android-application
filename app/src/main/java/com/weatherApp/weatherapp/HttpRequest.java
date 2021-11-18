@@ -6,14 +6,12 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-@SuppressWarnings("ALL")
 public class HttpRequest {
     public static String excuteGet(String targetURL1, String targetURL2) {
         URL url;
         HttpURLConnection connection = null;
         try {
             url = new URL(targetURL1);
-            System.out.println(url);
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
 
@@ -21,7 +19,6 @@ public class HttpRequest {
             int status = connection.getResponseCode();
             if(status == 404){
                 url = new URL(targetURL2);
-                System.out.println(url);
                 connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("GET");
                 status = connection.getResponseCode();

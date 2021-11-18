@@ -22,6 +22,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.json.JSONException;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
 
     TextView addressTxt, statusTxt, tempTxt, temp_minTxt, temp_maxTxt, sunriseTxt, sunsetTxt, windTxt, humidityTxt;
     ImageView weatherCon;
+    LinearLayout humidityBack;
     EditText searchBox;
     Button searchBtn;
 
@@ -68,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
         windTxt = findViewById(R.id.wind);
         humidityTxt = findViewById(R.id.humidity);
         weatherCon = findViewById(R.id.weatherCon);
+        humidityBack = findViewById(R.id.humidityBack);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         searchBtn = findViewById(R.id.button);
@@ -82,10 +85,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
         if(checkLatLng) {
             try {
                 List<Address> addresses = gcd.getFromLocation(lat, lng, 1);
-                System.out.println("latitude: "+lat);
-                System.out.println("longitude: "+lng);
                 cityNameFromLatLng = addresses.get(0).getLocality();
-                System.out.println(addresses.get(0));
                 if(cityNameFromLatLng == null){
                     cityNameFromLatLng = addresses.get(0).getCountryName();
                 }
@@ -158,15 +158,12 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
         protected String doInBackground(String... args) {
             String targetUrl1 = "https://api.openweathermap.org/data/2.5/weather?q=" + CITY + "&units=metric&appid=" + API;
             String targetUrl2 = "https://api.openweathermap.org/data/2.5/weather?q=" + COUNTRY + "&units=metric&appid=" + API;
-            String response = HttpRequest.excuteGet(targetUrl1, targetUrl2);
-            System.out.println(response);
-            return response;
+            return HttpRequest.excuteGet(targetUrl1, targetUrl2);
         }
 
-        @SuppressLint("SetTextI18n")
+        @SuppressLint({"SetTextI18n", "UseCompatLoadingForDrawables", "NewApi"})
         @Override
         protected void onPostExecute(String result) {
-            System.out.println(result);
             try{
                 JSONObject jsonObj = new JSONObject(result);
                 JSONObject main = jsonObj.getJSONObject("main");
@@ -183,6 +180,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                 String windSpeed = wind.getString("speed");
                 String weatherDescription = weather.getString("description");
                 String address = jsonObj.getString("name") + ", " + sys.getString("country");
+                int humidityTemp = Integer.parseInt(humidity);
 
                 /*Set ค่าต่างๆ ตาม TextView*/
                 addressTxt.setText(address);
@@ -227,6 +225,14 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                     default:
                         weatherCon.setImageDrawable(getResources().getDrawable(R.drawable.clouds2));
                         break;
+                }//end switch
+
+                if(humidityTemp >= 0 && humidityTemp < 20){
+                    humidityBack.setBackground(getResources().getDrawable(R.drawable.rectangle0));
+                }else if(humidityTemp >= 20 && humidityTemp < 60){
+                    humidityBack.setBackground(getResources().getDrawable(R.drawable.rectangle1));
+                }else if(humidityTemp >= 60){
+                    humidityBack.setBackground(getResources().getDrawable(R.drawable.rectangle2));
                 }
 
             }catch(JSONException e) {
@@ -236,7 +242,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                 alertDialog.setCancelable(false);
                 ((TextView) view.findViewById(R.id.textTitle)).setText(R.string.err);
                 value = getText(R.string.err_text) + "\"" +value+ "\"";
-                System.out.println(value);
                 ((TextView) view.findViewById(R.id.textMessage)).setText(value);
                 ((Button) view.findViewById(R.id.button)).setText(R.string.btn);
                 final AlertDialog alert = alertDialog.create();
