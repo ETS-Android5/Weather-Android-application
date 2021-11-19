@@ -22,7 +22,7 @@
 13-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:8:22-76
 14
 15    <application
-15-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:13:5-30:19
+15-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:13:5-32:19
 16        android:allowBackup="true"
 16-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:14:9-35
 17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -34,50 +34,54 @@
 20-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:18:9-36
 21        android:roundIcon="@mipmap/ic_launcher_round"
 21-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:16:9-54
-22        android:supportsRtl="true"
-22-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:17:9-35
-23        android:testOnly="true"
-24        android:theme="@style/AppTheme" >
-24-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:19:9-40
-25        <activity
-25-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:21:9-29:20
-26            android:name="com.weatherApp.weatherapp.MainActivity"
-26-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:22:13-66
-27            android:exported="true" >
-27-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:23:13-36
-28            <intent-filter>
-28-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:25:13-28:29
-29                <action android:name="android.intent.action.MAIN" />
-29-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:26:17-69
-29-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:26:25-66
-30
-31                <category android:name="android.intent.category.LAUNCHER" />
-31-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:27:17-77
-31-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:27:27-74
-32            </intent-filter>
-33        </activity>
-34
-35        <provider
-35-->[androidx.emoji2:emoji2:1.0.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/beb1e8c1d1724370afa1be71eb324942/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
-36            android:name="androidx.startup.InitializationProvider"
-36-->[androidx.emoji2:emoji2:1.0.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/beb1e8c1d1724370afa1be71eb324942/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
-37            android:authorities="com.weatherApp.weatherapp.androidx-startup"
-37-->[androidx.emoji2:emoji2:1.0.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/beb1e8c1d1724370afa1be71eb324942/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
-38            android:exported="false" >
-38-->[androidx.emoji2:emoji2:1.0.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/beb1e8c1d1724370afa1be71eb324942/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
-39            <meta-data
-39-->[androidx.emoji2:emoji2:1.0.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/beb1e8c1d1724370afa1be71eb324942/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
-40                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-40-->[androidx.emoji2:emoji2:1.0.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/beb1e8c1d1724370afa1be71eb324942/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
-41                android:value="androidx.startup" />
-41-->[androidx.emoji2:emoji2:1.0.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/beb1e8c1d1724370afa1be71eb324942/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
-42            <meta-data
-42-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/4d87c3e3b70abeed5e61faf08f3b9b5b/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
-43                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-43-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/4d87c3e3b70abeed5e61faf08f3b9b5b/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
-44                android:value="androidx.startup" />
-44-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/4d87c3e3b70abeed5e61faf08f3b9b5b/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
-45        </provider>
-46    </application>
-47
-48</manifest>
+22        android:screenOrientation="portrait"
+22-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:20:9-45
+23        android:supportsRtl="true"
+23-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:17:9-35
+24        android:testOnly="true"
+25        android:theme="@style/AppTheme" >
+25-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:19:9-40
+26        <activity
+26-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:22:9-31:20
+27            android:name="com.weatherApp.weatherapp.MainActivity"
+27-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:23:13-66
+28            android:exported="true"
+28-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:24:13-36
+29            android:screenOrientation="portrait" >
+29-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:25:13-49
+30            <intent-filter>
+30-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:27:13-30:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:28:17-69
+31-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:28:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:29:17-77
+33-->/Users/adeenunabdullee/Code/CS361_Final-project/app/src/main/AndroidManifest.xml:29:27-74
+34            </intent-filter>
+35        </activity>
+36
+37        <provider
+37-->[androidx.emoji2:emoji2:1.0.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/beb1e8c1d1724370afa1be71eb324942/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+38            android:name="androidx.startup.InitializationProvider"
+38-->[androidx.emoji2:emoji2:1.0.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/beb1e8c1d1724370afa1be71eb324942/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+39            android:authorities="com.weatherApp.weatherapp.androidx-startup"
+39-->[androidx.emoji2:emoji2:1.0.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/beb1e8c1d1724370afa1be71eb324942/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+40            android:exported="false" >
+40-->[androidx.emoji2:emoji2:1.0.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/beb1e8c1d1724370afa1be71eb324942/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+41            <meta-data
+41-->[androidx.emoji2:emoji2:1.0.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/beb1e8c1d1724370afa1be71eb324942/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+42                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+42-->[androidx.emoji2:emoji2:1.0.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/beb1e8c1d1724370afa1be71eb324942/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+43                android:value="androidx.startup" />
+43-->[androidx.emoji2:emoji2:1.0.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/beb1e8c1d1724370afa1be71eb324942/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+44            <meta-data
+44-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/4d87c3e3b70abeed5e61faf08f3b9b5b/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+45                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+45-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/4d87c3e3b70abeed5e61faf08f3b9b5b/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+46                android:value="androidx.startup" />
+46-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/adeenunabdullee/.gradle/caches/transforms-3/4d87c3e3b70abeed5e61faf08f3b9b5b/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+47        </provider>
+48    </application>
+49
+50</manifest>
