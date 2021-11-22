@@ -190,8 +190,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                 temp_maxTxt.setText(tempMax);
                 sunriseTxt.setText(new SimpleDateFormat("hh:mm a", Locale.ENGLISH).format(new Date(sunrise * 1000)));
                 sunsetTxt.setText(new SimpleDateFormat("hh:mm a", Locale.ENGLISH).format(new Date(sunset * 1000)));
-                windTxt.setText("Wind: "+windSpeed);
-                humidityTxt.setText("Humidity: "+humidity);
+                windTxt.setText("Wind: "+windSpeed+" km/h");
+                humidityTxt.setText("Humidity: "+humidity+"%");
 
                 /*เปลี่ยนรูป icon weather condition*/
                 switch (weatherDescription){
