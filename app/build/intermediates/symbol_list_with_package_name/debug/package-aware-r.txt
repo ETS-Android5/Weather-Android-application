@@ -932,6 +932,8 @@ drawable snow
 drawable sun
 drawable sunrise_back
 drawable sunset_back
+drawable sw_track
+drawable switch_style
 drawable temp_back
 drawable test
 drawable test2
@@ -1224,6 +1226,7 @@ id submit_area
 id sunrise
 id sunset
 id supportScrollUp
+id switch1
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -1375,6 +1378,9 @@ string search_menu_title
 string status_bar_notification_info_overflow
 string sunrise
 string sunset
+string swap1
+string swap2
+string switchName
 string temp
 string weather
 string wind
