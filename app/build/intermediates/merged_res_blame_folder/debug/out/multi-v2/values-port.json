@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/adeenunabdullee/Code/CS361_Final-project/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
+            "outputFile": "C:\\Users\\t kak\\Desktop\\CS361_Final-project\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
             "map": [
                 {
-                    "source": "/Users/adeenunabdullee/.gradle/caches/transforms-3/9079c9694b4d4270d7cd62242948af25/transformed/appcompat-1.4.0/res/values-port/values-port.xml",
+                    "source": "C:\\Users\\t kak\\.gradle\\caches\\transforms-3\\9079c9694b4d4270d7cd62242948af25\\transformed\\appcompat-1.4.0\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -3,6 +3,7 @@ package com.weatherApp.weatherapp;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -20,9 +21,11 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import org.json.JSONException;
@@ -36,12 +39,18 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements LocationListener{
     protected LocationManager locationManager;
-    String API = "8118ed6ee68db2debfaaa5a44c832918"; //API Token
+    String API = "6ed54ad3c8eba2ae47b82aba8cdf3d99"; //API Token
     String CITY = "";
     String COUNTRY = "";
     String changeCity = "";
     String cityNameFromLatLng = "";
     String value;
+    double roundOff;
+    double roundOffMin;
+    double roundOffMax;
+    String temp;
+    String tempMin;
+    String tempMax;
     double lat = 0, lng = 0;
     boolean checkLatLng = true;
 
@@ -50,6 +59,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
     LinearLayout humidityBack;
     EditText searchBox;
     Button searchBtn;
+    @SuppressLint("UseSwitchCompatOrMaterialCode")
+    SwitchCompat aSwitch;
 
     @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
     @SuppressLint("MissingPermission")
@@ -72,10 +83,20 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
         weatherCon = findViewById(R.id.weatherCon);
         humidityBack = findViewById(R.id.humidityBack);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         searchBtn = findViewById(R.id.button);
         new SearchBox().searchWithButton(searchBtn);
         new SearchBox().searchWithEnterKey();
+        aSwitch = findViewById(R.id.switch1);
+        aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(aSwitch.isChecked()){
+                    changeCtoF();
+                }else {
+                    changeFtoC();
+                }
+            }
+        });
     }
 
     public void onLocationChanged(Location location) {
@@ -123,6 +144,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                         changeCity = value;
                         CITY = changeCity;
                         COUNTRY = "";
+                        aSwitch.setChecked(false);
                         new weatherTask().execute();
                         changeCity = "";
                     }
@@ -141,6 +163,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                         changeCity = value;
                         CITY = changeCity;
                         COUNTRY = "";
+                        aSwitch.setChecked(false);
                         new weatherTask().execute();
                         changeCity = "";
                     }
@@ -172,11 +195,15 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                 JSONObject weather = jsonObj.getJSONArray("weather").getJSONObject(0);
 
                 double fahrenheit = (Double.parseDouble(main.getString("temp"))*(1.8))+32;
-                double roundOff = (double) Math.round(fahrenheit * 100) / 100;
+                double fahrenheitMin = (Double.parseDouble(main.getString("temp_min"))*(1.8))+32;
+                double fahrenheitMax = (Double.parseDouble(main.getString("temp_max"))*(1.8))+32;
+                roundOff = (double) Math.round(fahrenheit * 100) / 100;
+                roundOffMin = (double) Math.round(fahrenheitMin * 100) / 100;
+                roundOffMax = (double) Math.round(fahrenheitMax * 100) / 100;
 
-                String temp = main.getString("temp") + "°C";
-                String tempMin = "Min Temp: " + main.getString("temp_min") + "°C";
-                String tempMax = "Max Temp: " + main.getString("temp_max") + "°C";
+                temp = main.getString("temp") + "°C";
+                tempMin = "Min Temp: " + main.getString("temp_min") + "°C";
+                tempMax = "Max Temp: " + main.getString("temp_max") + "°C";
                 String humidity = main.getString("humidity");
                 long sunrise = sys.getLong("sunrise");
                 long sunset = sys.getLong("sunset");
@@ -252,5 +279,19 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                 alert.show();
             }
         }
+    }
+    @SuppressLint("SetTextI18n")
+    public void changeCtoF(){
+        String f = String.valueOf(roundOff);
+        String fMin = String.valueOf(roundOffMin);
+        String fMax = String.valueOf(roundOffMax);
+        tempTxt.setText(f+"°F");
+        temp_minTxt.setText("Min Temp: "+fMin+"°F");
+        temp_maxTxt.setText("Max Temp: "+fMax+"°F");
+    }
+    public void changeFtoC(){
+        tempTxt.setText(temp);
+        temp_minTxt.setText(tempMin);
+        temp_maxTxt.setText(tempMax);
     }
 }

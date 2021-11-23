@@ -13,15 +13,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="40dp"
         android:layout_marginRight="10dp"
         android:orientation="vertical">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="@font/mvboli"
+            android:text="@string/switchName"
+            android:textOff="@string/swap1"
+            android:textOn="@string/swap2"
+            android:thumb="@drawable/switch_style"
+            app:track="@drawable/sw_track"
+            app:showText="true"
+            tools:ignore="RtlHardcoded,TouchTargetSizeCheck,UnusedAttribute,UseSwitchCompatOrMaterialXml" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="@drawable/temp_back">
+            android:background="@drawable/temp_back"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -42,11 +57,11 @@
                     android:fontFamily="@font/mvboli"
                     android:gravity="left"
                     android:hint="@string/search"
-                    android:inputType="text"
                     android:imeOptions="actionSearch"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
                     android:textSize="15sp"
-                    tools:ignore="DuplicateSpeakableTextCheck,RtlCompat,RtlHardcoded,TouchTargetSizeCheck,UnusedAttribute"
-                    android:importantForAutofill="no" />
+                    tools:ignore="DuplicateSpeakableTextCheck,RtlCompat,RtlHardcoded,TouchTargetSizeCheck,UnusedAttribute" />
 
                 <Button
                     android:id="@+id/button"
@@ -68,9 +83,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
+            android:fontFamily="@font/mvboli"
             android:gravity="center"
             android:text="@string/City"
-            android:fontFamily="@font/mvboli"
             android:textSize="35sp"
             tools:ignore="UnusedAttribute" />
 
@@ -86,10 +101,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:fontFamily="@font/mvboli"
                 android:gravity="center"
                 android:text="@string/temp"
                 android:textSize="50sp"
-                android:fontFamily="@font/mvboli"
                 tools:ignore="UnusedAttribute" />
 
             <LinearLayout
@@ -104,8 +119,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_weight="1"
-                    android:text="@string/min_temp"
                     android:fontFamily="@font/mvboli"
+                    android:text="@string/min_temp"
                     tools:ignore="RtlCompat,UnusedAttribute" />
 
                 <TextView
@@ -114,10 +129,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
+                    android:fontFamily="@font/mvboli"
                     android:gravity="right"
                     android:text="@string/max_temp"
-                    tools:ignore="RtlCompat,RtlHardcoded,UnusedAttribute"
-                    android:fontFamily="@font/mvboli"/>
+                    tools:ignore="RtlCompat,RtlHardcoded,UnusedAttribute" />
             </LinearLayout>
         </LinearLayout>
 
@@ -125,8 +140,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            android:baselineAligned="false">
+            android:baselineAligned="false"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="match_parent"

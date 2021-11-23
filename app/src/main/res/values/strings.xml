@@ -14,4 +14,7 @@
     <string name="btn">Ok</string>
     <string name="err">Something went wrong</string>
     <string name="err_text">Sorry, couldn\'t find\u0020</string>
+    <string name="switchName">Degree\u0020</string>
+    <string name="swap1">°C</string>
+    <string name="swap2">°F</string>
 </resources>
