@@ -171,6 +171,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                 JSONObject wind = jsonObj.getJSONObject("wind");
                 JSONObject weather = jsonObj.getJSONArray("weather").getJSONObject(0);
 
+                double fahrenheit = (Double.parseDouble(main.getString("temp"))*(1.8))+32;
+                double roundOff = (double) Math.round(fahrenheit * 100) / 100;
+
                 String temp = main.getString("temp") + "°C";
                 String tempMin = "Min Temp: " + main.getString("temp_min") + "°C";
                 String tempMax = "Max Temp: " + main.getString("temp_max") + "°C";

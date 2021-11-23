@@ -12,6 +12,7 @@ public class HttpRequest {
         HttpURLConnection connection = null;
         try {
             url = new URL(targetURL1);
+            System.out.println(url);
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
 
