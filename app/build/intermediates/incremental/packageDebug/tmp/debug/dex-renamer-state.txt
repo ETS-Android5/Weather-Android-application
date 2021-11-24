@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-#Tue Nov 23 11:57:19 ICT 2021
+#Wed Nov 24 20:25:59 ICT 2021
 base.0=/Users/adeenunabdullee/Code/CS361_Final-project/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
-=======
-#Tue Nov 23 13:24:49 ICT 2021
-base.0=C\:\\Users\\t kak\\Desktop\\CS361_Final-project\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
->>>>>>> a357ce604e31a87027b77a58db2656b97eab2d13
 renamed.0=classes.dex
 path.0=classes.dex

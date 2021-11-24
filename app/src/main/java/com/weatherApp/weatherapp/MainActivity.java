@@ -1,10 +1,5 @@
 package com.weatherApp.weatherapp;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SwitchCompat;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.location.Address;
@@ -21,12 +16,15 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Switch;
 import android.widget.TextView;
+
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -38,19 +36,15 @@ import java.util.List;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements LocationListener{
+
     protected LocationManager locationManager;
     String API = "6ed54ad3c8eba2ae47b82aba8cdf3d99"; //API Token
     String CITY = "";
     String COUNTRY = "";
     String changeCity = "";
     String cityNameFromLatLng = "";
-    String value;
-    double roundOff;
-    double roundOffMin;
-    double roundOffMax;
-    String temp;
-    String tempMin;
-    String tempMax;
+    String value, temp, tempMin, tempMax;
+    double roundOff, roundOffMax, roundOffMin;
     double lat = 0, lng = 0;
     boolean checkLatLng = true;
 
@@ -82,23 +76,22 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
         humidityTxt = findViewById(R.id.humidity);
         weatherCon = findViewById(R.id.weatherCon);
         humidityBack = findViewById(R.id.humidityBack);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         searchBtn = findViewById(R.id.button);
+        aSwitch = findViewById(R.id.switch1);
+
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         new SearchBox().searchWithButton(searchBtn);
         new SearchBox().searchWithEnterKey();
-        aSwitch = findViewById(R.id.switch1);
-        aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if(aSwitch.isChecked()){
-                    changeCtoF();
-                }else {
-                    changeFtoC();
-                }
+        aSwitch.setOnCheckedChangeListener((compoundButton, b) -> {
+            if(aSwitch.isChecked()){
+                changeCtoF();
+            }else {
+                changeFtoC();
             }
         });
     }
 
+    /* เรียกใช้ค่า Latitude และ Longitude จากนั้นแปลงเป็นชื่อสถานที่ */
     public void onLocationChanged(Location location) {
         lat = location.getLatitude();
         lng = location.getLongitude();
@@ -133,6 +126,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
 
     class SearchBox {
         @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
+        /* การ search โดยกดค้นหาจาก button search */
         protected void searchWithButton(Button btn){
             btn.setOnClickListener(view -> {
                 if(changeCity.equals("")){
@@ -152,6 +146,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                 }//end if
             });
         }
+        /* การ search โดยกดค้นหาจาก virtual keyboard */
         protected void searchWithEnterKey(){
             searchBox = findViewById(R.id.searchBox);
             searchBox.setOnEditorActionListener((v, actionId, event) -> {
@@ -175,15 +170,16 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
         }
     }
 
+    /* ส่ง request ไปหา API */
     @SuppressLint("StaticFieldLeak")
     class weatherTask extends AsyncTask<String, Void, String> {
-
         protected String doInBackground(String... args) {
             String targetUrl1 = "https://api.openweathermap.org/data/2.5/weather?q=" + CITY + "&units=metric&appid=" + API;
             String targetUrl2 = "https://api.openweathermap.org/data/2.5/weather?q=" + COUNTRY + "&units=metric&appid=" + API;
             return HttpRequest.excuteGet(targetUrl1, targetUrl2);
         }
 
+        /* รับ response จาก Http (API เป็นแบบ JSON) */
         @SuppressLint({"SetTextI18n", "UseCompatLoadingForDrawables", "NewApi"})
         @Override
         protected void onPostExecute(String result) {
@@ -257,6 +253,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                         break;
                 }//end switch
 
+                /* Set พื้นหลังตาม range ของค่า Humidity */
                 if(humidityTemp >= 0 && humidityTemp < 20){
                     humidityBack.setBackground(getResources().getDrawable(R.drawable.rectangle0));
                 }else if(humidityTemp >= 20 && humidityTemp < 60){
@@ -266,6 +263,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                 }
 
             }catch(JSONException e) {
+                /* หากไม่ตรวจพบสถานที่ที่ค้นหา AlertDialog แจ้งเตือน */
                 final AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this, R.style.CustomDialog);
                 View view = LayoutInflater.from(MainActivity.this).inflate(R.layout.alert_style, findViewById(R.id.linear_layout), false);
                 alertDialog.setView(view);
@@ -280,6 +278,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
             }
         }
     }
+    /* ฟังก์ชั่นเปลี่ยนค่าอุณหภูมิ C to F */
     @SuppressLint("SetTextI18n")
     public void changeCtoF(){
         String f = String.valueOf(roundOff);
